@@ -1,0 +1,176 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa&display=swap");
+
+html {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Comfortaa", cursive;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  min-height: 100vh;
+  overflow-y: hidden;
+}
+/** Video Background */
+.video-background {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  height: 100vh;
+  width: 100vw;
+}
+video {
+  object-fit: cover;
+  object-position: 70%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.video-overlay {
+  background-color: rgba(255, 255, 255, 0.35);
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+}
+/** Container */
+.container {
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 5px;
+  color: black;
+  display: flex;
+  justify-content: center;
+  min-width: 580px;
+  min-height: 304px;
+  margin: 0 auto;
+  padding: 25px 50px;
+  z-index: 2;
+}
+.input-container {
+  position: relative;
+  top: 20px;
+}
+h1 {
+  font-size: 35px;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+/** Form */
+.form {
+  width: 480px;
+}
+label {
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin-left: 10px;
+}
+input {
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  font-family: inherit;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  padding: 10px;
+  outline: none;
+  width: 95%;
+}
+/** Button */
+button {
+  background: #006959;
+  border: none;
+  border-radius: 20px;
+  color: white;
+  cursor: pointer;
+  font-family: inherit;
+  letter-spacing: 1.5px;
+  height: 40px;
+  width: 100%;
+  margin-top: 15px;
+  outline: none;
+  text-transform: uppercase;
+}
+button:hover {
+  filter: brightness(110%);
+}
+/** Countdown */
+ul {
+  margin-left: -45px;
+}
+li {
+  display: inline-block;
+  font-size: 20px;
+  list-style-type: none;
+  padding: 10px;
+  text-transform: uppercase;
+}
+li span {
+  display: block;
+  font-size: 60px;
+  text-align: center;
+}
+/** Complete */
+.complete {
+  position: relative;
+  top: 60px;
+}
+.complete-title {
+  animation: complete 4s infinite;
+}
+@keyframes complete {
+  0% {
+    color: #e90d0d;
+  }
+  25% {
+    color: #e9d30d;
+  }
+  50% {
+    color: #40e90d;
+    transform: scale(1.2);
+  }
+  75% {
+    color: rgb(0, 38, 253);
+  }
+  100% {
+    color: rgb(181, 16, 231);
+  }
+}
+
+/** Media Query: Large Smartphone (Vertical) */
+@media screen and (max-width: 600px) {
+  .container {
+    min-height: 245px;
+    min-width: unset;
+    margin: 10px;
+    padding: 20px;
+    width: 95vw;
+  }
+  .input-container {
+    top: unset;
+  }
+  .countdown {
+    position: relative;
+    top: 10px;
+  }
+  .form {
+    width: unset;
+  }
+  input {
+    width: 93%;
+  }
+  h1 {
+    font-size: 19px;
+  }
+  li {
+    font-size: 7.5px;
+  }
+  li span {
+    font-size: 25px;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 1280px) {
+}
